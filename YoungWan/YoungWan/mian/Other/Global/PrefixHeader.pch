@@ -1,0 +1,65 @@
+//
+//  PrefixHeader.pch
+//  YoungWan
+//
+//  Created by 李明丹 on 16/4/11.
+//  Copyright © 2016年 李明丹. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//项目名称
+
+//终端唯一标识符
+#define AppUUID [[UIDevice currentDevice] uuid]
+
+#define DBPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"YoungWan.db"]
+
+//导入常用分类
+#import "UIView+Frame.h"
+#import "NSString+CSVDictionary.h"
+#import "NSDictionary+Additions.h"
+#import "NSDate+BWExtension.h"
+#import "McSystemMessageUtil.h"
+#import "NSStringToBetyArray.h"
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//导入全局静态变量
+#import "BWConst.h"
+
+//导入常用第三方框架
+#import "FMDB.h"
+#import "FMResultSet.h"
+#import "XMLDictionary.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import <UIDevice+FCUUID.h>
+#import "Reachability.h"
+
+//导入常用工具类
+#import "BWHttpRequestManager.h"
+#import "LoginUserManager.h"
+#import "BWCSVModel.h"
+#import "BWCSVDatabase.h"
+
+//打印内容
+//#ifdef DEBUG
+//#define  NSLog(__VA_ARGS__)
+//#else
+//#define NSLog(...)
+//#endif
+
+//自定义颜色
+#define HBRGBColor(r, g, b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define HBConstColor HBRGBColor(26, 199, 114,1)
+
+
+//屏幕的宽和高
+#define HBScreenWidth [UIScreen mainScreen].bounds.size.width
+#define HBScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* PrefixHeader_pch */
